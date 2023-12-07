@@ -1,5 +1,0 @@
-setup.py
-cantinaUtils.egg-info/PKG-INFO
-cantinaUtils.egg-info/SOURCES.txt
-cantinaUtils.egg-info/dependency_links.txt
-cantinaUtils.egg-info/top_level.txt
