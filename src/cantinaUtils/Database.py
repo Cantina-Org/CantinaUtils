@@ -20,6 +20,7 @@ class DataBase:
         self.connection()  # Connection avec la base de données.
         self.cursor.execute(body, args)  # Execution de la query.
         self.cursor.close()  # Fermeture du curseur.
+        self.connector.commit()  # Enregistrement dans la base de donnée.
         self.connector.close()  # Fermeture de la connexion.
 
     def select(self, body, args, number_of_data=None):  # Fonction permettant d'obtenir des données de la base de donnée
