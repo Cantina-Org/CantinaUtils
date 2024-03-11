@@ -3,7 +3,7 @@
 Le module python utilitaire de Cantina
 
 ## Documentation
-### Database 
+### cantinaUtils.Database 
 `Database.exec`:<br>
 > #### Arguments :<br>
 > <span style='color:red'>**body**:</span> (str) Le corps de la requête SQL.<br>
@@ -23,10 +23,10 @@ Cette fonction sert à executer une requête SQL, qui lis la base de données (S
 La fonction retourne des informations sous forme d'un tableau.
 
 
-### email_utils
+### cantinaUtils.email_utils
 `send_verification_email`:
 > #### Arguments : 
-> <span style='color:red'>**database**:</span> (class) Argument qui permet d'avoir accès à la base de données depuis la fonction
+> <span style='color:red'>**database**:</span> (class) Argument qui permet d'avoir accès à la base de données depuis la fonction.
 
 Cette fonction sert à envoyer un mail, avec un code unique, afin de vérifier l'adresse email de l'utilisateur.<br>
 La fonction ne retourne pas d'informations mais peux retourner des erreurs.
@@ -34,3 +34,18 @@ La fonction ne retourne pas d'informations mais peux retourner des erreurs.
 > **error1**: Cette erreur annonce que la configuration pour l'utilisation d'un serveur SMTP n'existe pas ou est incomplète.<br>
 > **error2**: Cette erreur annonce que la sujet ou le contenu de l'email n'est pas défini dans la base de données.
 
+
+### cantinaUtils.verify_login
+`verify_login`:
+> #### Arguments:
+> <span style='color:red'>**database**:</span> (class) Argument qui permet d'avoir accès à la base de données depuis la fonction.
+
+Cette fonction sert à savoir si un utilisateur toute les conditions sont réunis pour dire si un utilisateur est connecté.<br>
+La fonction renvoie `True` si l'utilisateurs est connecté et `False` si il ne l'est pas.
+
+`verify_A2F`:
+> #### Arguments:
+> <span style='color:red'>**database**:</span> (class) Argument qui permet d'avoir accès à la base de données depuis la fonction.
+
+Cette fonction sert à savoir si le code d'A2F fournis dans le champ `a2f-code` dans la page de connection est correspondant avec celui générer par notre système.<br>
+La fonction renvoie `True` si le code est correspondant ou `False` si il ne correspont pas 
