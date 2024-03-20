@@ -41,7 +41,7 @@ La fonction ne retourne pas d'informations mais peux retourner des erreurs.
 > <span style='color:red'>**database**:</span> (class) Argument qui permet d'avoir accès à la base de données depuis la fonction.
 
 Cette fonction sert à savoir si un utilisateur toute les conditions sont réunis pour dire si un utilisateur est connecté.<br>
-La fonction renvoie `True` si l'utilisateurs est connecté et `False` si il ne l'est pas.
+La fonction renvoie `True` si l'utilisateurs est connecté et `False` si il ne l'est pas. La fonction peux renvoyer `desactivated` si les conditions sont réunis mais que le compte à été désactivé par un administrateur.
 
 `verify_A2F`:
 > #### Arguments:
